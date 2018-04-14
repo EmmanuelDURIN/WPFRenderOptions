@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="DemoTextOptions.UserControlTextOptions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DemoTextOptions"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <!--
+                      EdgeMode;
+                      BitmapScalingMode;
+                      ClearTypeHint;
+    -->
+
+    <StackPanel RenderOptions.EdgeMode="{Binding EdgeMode}" 
+                RenderOptions.BitmapScalingMode="{Binding BitmapScalingMode}"
+                RenderOptions.ClearTypeHint="{Binding ClearTypeHint}">
+        <TextBlock Text="EdgeMode :"  >
+            <LineBreak/>
+            <Run Text="{Binding EdgeMode, Mode=OneTime}" FontWeight="Bold"/>
+        </TextBlock>
+        <TextBlock Text="ClearTypeHint :"  >
+            <LineBreak/>
+            <Run Text="{Binding ClearTypeHint, Mode=OneTime}" FontWeight="Bold"/>
+        </TextBlock>
+        <TextBlock Text="BitmapScalingMode :"  >
+            <LineBreak/>
+            <Run Text="{Binding BitmapScalingMode, Mode=OneTime}" FontWeight="Bold"/>
+        </TextBlock>
+        <Viewbox Stretch="Fill">
+            <Path x:Name="HeaderLeftPath" Fill="Black" >
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigure StartPoint="00,00" IsClosed="False">
+                                <LineSegment Point="00,10"/>
+                                <LineSegment Point="00,00"/>
+                                <BezierSegment Point1="40,20" Point2="30,46" Point3="56,46"/>
+                                <LineSegment Point="56,00"/>
+                                <LineSegment Point="0,00"/>
+                            </PathFigure>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        </Viewbox>
+    </StackPanel>
+</UserControl>

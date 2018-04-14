@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace DemoTextOptions
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour UserControlTextOptions.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserControlTextOptions : UserControl
     {
-        public MainWindow()
+        public UserControlTextOptions()
         {
             InitializeComponent();
         }
